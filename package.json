@@ -8,9 +8,13 @@
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
     "gatsby-plugin-react-helmet": "next",
+    "prop-types": "^15.6.2",
+    "ramda": "^0.25.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "rebass": "^3.0.0-4",
+    "styled-components": "^3.4.6"
   },
   "keywords": [
     "gatsby"
@@ -29,12 +33,14 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
+    "babel-plugin-styled-components": "^1.7.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "17.0.0",
     "eslint-config-sbkonzept": "sb-konzept/eslint-config-sbkonzept#v1.2.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.10.0",
+    "gatsby-plugin-styled-components": "^2.0.11",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
     "plop": "^2.1.0",
@@ -47,8 +53,19 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   },
   "eslintConfig": {
-    "extends": "sbkonzept"
+    "extends": "sbkonzept",
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "rules": {
+      "react/prop-types": "off"
+    }
   },
+  "eslintIgnore": [
+    "node_modules",
+    "public"
+  ],
   "lint-staged": {
     "*.js": [
       "yarn format:prettier",
