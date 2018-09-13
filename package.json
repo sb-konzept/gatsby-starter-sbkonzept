@@ -29,9 +29,16 @@
     "lint:eslint": "eslint",
     "format:prettier": "prettier-eslint --write",
     "format:src": "yarn format:prettier 'src/**/*.js'",
+    "storybook": "start-storybook -p 6006",
     "generate": "plop"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.10",
+    "@storybook/addon-info": "^4.0.0-alpha.10",
+    "@storybook/addon-knobs": "^4.0.0-alpha.10",
+    "@storybook/addon-links": "^4.0.0-alpha.10",
+    "@storybook/addon-viewport": "^4.0.0-alpha.10",
+    "@storybook/react": "^4.0.0-alpha.10",
     "babel-eslint": "^8.0.2",
     "babel-plugin-styled-components": "^1.7.1",
     "eslint": "^4.19.1",
