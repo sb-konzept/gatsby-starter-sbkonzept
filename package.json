@@ -31,7 +31,7 @@
     "babel-eslint": "^8.0.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "17.0.0",
-    "eslint-config-sbkonzept": "sb-konzept/eslint-config-sbkonzept",
+    "eslint-config-sbkonzept": "sb-konzept/eslint-config-sbkonzept#v1.2.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.10.0",

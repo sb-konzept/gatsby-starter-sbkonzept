@@ -3324,9 +3324,9 @@ eslint-config-react-app@3.0.0-next.66cc7a90:
   dependencies:
     confusing-browser-globals "2.0.0-next.66cc7a90"
 
-eslint-config-sbkonzept@sb-konzept/eslint-config-sbkonzept:
-  version "1.1.1"
-  resolved "https://codeload.github.com/sb-konzept/eslint-config-sbkonzept/tar.gz/327b9e159a29c71005071830723e76017c0b5f28"
+eslint-config-sbkonzept@sb-konzept/eslint-config-sbkonzept#v1.2.0:
+  version "1.2.0"
+  resolved "https://codeload.github.com/sb-konzept/eslint-config-sbkonzept/tar.gz/e739a842eca8be78a888a3a3f062b095849d38f9"
 
 eslint-import-resolver-node@^0.3.1:
   version "0.3.2"
