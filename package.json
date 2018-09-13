@@ -5,9 +5,9 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "next",
-    "gatsby-plugin-react-helmet": "next",
     "gatsby-plugin-manifest": "next",
     "gatsby-plugin-offline": "next",
+    "gatsby-plugin-react-helmet": "next",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-helmet": "^5.2.0"
@@ -20,13 +20,41 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "precommit": "lint-staged",
+    "lint:eslint": "eslint",
+    "format:prettier": "prettier-eslint --write",
+    "format:src": "yarn format:prettier 'src/**/*.js'"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "17.0.0",
+    "eslint-config-sbkonzept": "sb-konzept/eslint-config-sbkonzept",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
+    "prettier-eslint-cli": "^4.7.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "eslintConfig": {
+    "extends": "sbkonzept"
+  },
+  "lint-staged": {
+    "*.js": [
+      "yarn format:prettier",
+      "yarn lint:eslint",
+      "git add"
+    ],
+    "*.json": [
+      "yarn format:prettier",
+      "git add"
+    ]
   }
 }
