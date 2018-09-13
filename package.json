@@ -24,7 +24,8 @@
     "precommit": "lint-staged",
     "lint:eslint": "eslint",
     "format:prettier": "prettier-eslint --write",
-    "format:src": "yarn format:prettier 'src/**/*.js'"
+    "format:src": "yarn format:prettier 'src/**/*.js'",
+    "generate": "plop"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",
@@ -36,6 +37,8 @@
     "eslint-plugin-react": "^7.9.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
+    "plop": "^2.1.0",
+    "plop-preset-sbkonzept": "sb-konzept/plop-preset-sbkonzept",
     "prettier": "^1.14.2",
     "prettier-eslint-cli": "^4.7.1"
   },
