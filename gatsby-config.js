@@ -17,6 +17,14 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
       }
     },
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {
+          '/sw.js': ['Cache-Control: no-store']
+        }
+      }
+    }
   ]
 }
