@@ -1,31 +1,34 @@
 import React from 'react'
-import { Box, Heading } from 'rebass'
+import styled from 'styled-components'
+import { util } from 'styled-system'
 import { Link } from 'gatsby'
 
-const Header = ({ siteTitle }) => (
-  <Box mb="1.45rem" bg="blue">
-    <Box
-      my="0"
-      mx="auto"
-      py="1.45rem"
-      px="1.0875rem"
-      css={{
-        maxWidth: '960px'
-      }}
-    >
-      <Heading>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none'
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </Heading>
-    </Box>
-  </Box>
-)
+const HeaderLink = styled(Link)`
+  > h1 {
+    margin: 0;
+    color: ${util.themeGet('colors.white')};
+    text-decoration: none;
 
-export default Header
+    &:hover {
+      color: ${util.themeGet('colors.white')};
+    }
+  }
+`
+
+function Header (props) {
+  const { children, ...rest } = props
+  return (
+    <div {...rest}>
+      <HeaderLink to="/">
+        <h1>{children}</h1>
+      </HeaderLink>
+    </div>
+  )
+}
+
+const StyledHeader = styled(Header)`
+  background-color: ${util.themeGet('colors.primary')};
+  padding: 1.5rem;
+`
+
+export default StyledHeader

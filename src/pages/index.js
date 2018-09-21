@@ -1,16 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import styled from 'styled-components'
-import Layout from '../components/Layout'
-
-const Test = styled.h1`
-  color: red;
-`
+import Layout from 'components/Layout'
 
 const IndexPage = () => (
   <Layout>
-    <Test>Hi people</Test>
+    <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <Link to="/page-2/">Go to page 2</Link>

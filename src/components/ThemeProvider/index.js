@@ -7,9 +7,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { ThemeProvider as BaseProvider } from 'styled-components'
-import theme from './theme'
-
-import './globalStyles'
+import theme from 'utils/theme'
 
 function ThemeProvider (props) {
   const { children } = props
